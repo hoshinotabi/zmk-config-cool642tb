@@ -59,6 +59,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
+
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
@@ -68,7 +69,9 @@
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-// スクロール方向を逆にしたい場合は <&msc SCRL_DOWN> と <&msc SCRL_UP> を入れ替えてください
+
+            // スクロール方向を逆にしたい場合は <&msc SCRL_DOWN> と <&msc SCRL_UP> を入れ替えてください
+
             tap-ms = <20>;
         };
 
@@ -85,10 +88,10 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W    &kp E         &kp R             &kp T                                                      &kp Y            &kp U    &kp I      &kp O      &kp P
-&kp A           &kp S    &kp D         &kp F             &kp G         &to 1                 &kp MINUS              &kp H            &kp J    &kp K      &kp L      &kp ENTER
-&kp Z           &kp X    &kp C         &kp V             &kp B         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp N            &lt 5 M  &mkp LCLK  &mkp MCLK  &mkp RCLK
-&kp LEFT_SHIFT  &kp TAB  &kp CAPSLOCK  &kp LEFT_CONTROL  &kp LEFT_ALT  &cmd_to_cmd           &lt 2 SPACE            &lt 5 BACKSPACE                                 &kp ESC
+&kp Q           &kp W    &kp E         &kp R             &kp T                                                      &kp Y  &kp U    &kp I      &kp O      &kp P
+&kp A           &kp S    &kp D         &kp F             &kp G         &to 1                 &kp MINUS              &kp H  &kp J    &kp K      &kp L      &kp ENTER
+&kp Z           &kp X    &kp C         &kp V             &kp B         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp N  &lt 5 M  &mkp LCLK  &mkp MCLK  &mkp RCLK
+&kp LEFT_SHIFT  &kp TAB  &kp CAPSLOCK  &kp LEFT_CONTROL  &kp LEFT_ALT  &cmd_to_cmd           &lt 2 SPACE            &to 5                                 &kp ESC
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -140,10 +143,10 @@
 
         SCROLL {
             bindings = <
-&kp Q           &kp UP_ARROW    &kp E            &kp R     &kp T                        &kp Y        &kp U  &kp I      &kp O       &kp P
-&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp F     &kp G        &kp N1  &kp N2  &kp H        &kp J  &kp K      &kp L       &kp ENTER
-&kp Z           &kp X           &kp C            &kp V     &kp B        &kp N3  &kp N4  &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
-&kp RSHIFT      &kp LCTRL       &kp LGUI         &kp LALT  &lt 1 SPACE  &kp N5  &kp N6  &lt 2 SPACE                                &kp BSPC
+&kp Q           &kp UP_ARROW    &kp E            &kp R     &kp T                        &kp Y  &kp U  &kp I      &kp O       &kp P
+&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp F     &kp G        &kp N1  &kp N2  &kp H  &kp J  &kp K      &kp L       &kp ENTER
+&kp Z           &kp X           &kp C            &kp V     &kp B        &kp N3  &kp N4  &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
+&kp RSHIFT      &kp LCTRL       &kp LGUI         &kp LALT  &lt 1 SPACE  &kp N5  &kp N6  &to 0                                &kp BSPC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
