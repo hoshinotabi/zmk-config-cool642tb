@@ -63,6 +63,21 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        ret_kp: ret_kp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&to 0 &macro_param_1to1>,
+                <&macro_press>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1>,
+                <&macro_release>,
+                <&kp MACRO_PLACEHOLDER>;
+
+            label = "RET_KP";
+        };
     };
 
     behaviors {
@@ -106,10 +121,10 @@
 
         default_layer {
             bindings = <
-&kp Q               &kp W  &kp E         &kp R        &kp T                            &kp Y          &kp U    &kp I      &kp O      &kp P
-&mt LEFT_CONTROL A  &kp S  &kp D         &kp F        &kp G  &to 1  &kp C_VOLUME_UP    &kp H          &lt 5 J  &kp K      &kp L      &kp ENTER
-&kp Z               &kp X  &kp C         &kp V        &kp B  &mo 2  &kp C_VOLUME_DOWN  &kp N          &kp M    &mkp LCLK  &mkp RCLK  &kp RIGHT_SHIFT
-&kp LEFT_SHIFT      &none  &kp LEFT_ALT  &cmd_to_cmd  &none  &mo 3  &kp SPACE          &kp BACKSPACE                                 &play_pause_n_p
+&kp Q               &kp W     &kp E         &kp R        &kp T                                   &kp Y          &kp U    &kp I      &kp O      &kp P
+&mt LEFT_CONTROL A  &kp S     &kp D         &kp F        &kp G  &to 1  &kp C_VOLUME_UP           &kp H          &lt 5 J  &kp K      &kp L      &kp ENTER
+&kp Z               &kp X     &kp C         &kp V        &kp B  &none  &mt K_MUTE C_VOLUME_DOWN  &kp N          &kp M    &mkp LCLK  &mkp RCLK  &kp RIGHT_SHIFT
+&kp LEFT_SHIFT      &kp LALT  &kp LEFT_ALT  &cmd_to_cmd  &mo 3  &mo 2  &kp SPACE                 &kp BACKSPACE                                 &play_pause_n_p
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -128,32 +143,32 @@
 
         NUM {
             bindings = <
-&none  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp BACKSPACE                &kp Y          &kp U           &kp I           &kp O            &kp P
-&none  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS      &none  &none  &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW    &kp RIGHT        &kp ENTER
-&none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS       &none  &none  &kp LC(SPACE)  &kp RG(SPACE)   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp SLASH
-&none  &kp NUMBER_0  &kp COMMA     &kp PERIOD    &kp EQUAL      &none  &none  &lt 2 SPACE                                                     &kp LEFT_SHIFT
+&kp CLEAR     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp BACKSPACE                &none  &none  &none  &none  &none
+&kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS      &none  &none  &none  &none  &none  &none  &none
+&kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS       &none  &none  &none  &none  &none  &none  &none
+&none         &kp NUMBER_0  &kp NUMBER_0  &kp PERIOD    &kp EQUAL      &none  &none  &none                       &none
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         ARROW {
             bindings = <
-&none  &none           &kp UP_ARROW    &none            &none                 &kp Y        &kp U  &kp I      &kp O       &kp P
-&none  &kp LEFT_ARROW  &none           &kp RIGHT_ARROW  &none  &none  &kp N2  &kp H        &kp J  &kp K      &kp L       &kp ENTER
-&none  &none           &kp DOWN_ARROW  &none            &none  &none  &kp N4  &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
-&none  &none           &none           &none            &none  &none  &kp N6  &lt 2 SPACE                                &kp BSPC
+&none  &kp HOME        &kp UP_ARROW    &kp PAGE_UP      &none                         &none            &none  &none  &none  &none
+&none  &kp LEFT_ARROW  &none           &kp RIGHT_ARROW  &none  &none  &none           &none            &none  &none  &none  &none
+&none  &kp END         &kp DOWN_ARROW  &kp PAGE_DOWN    &none  &none  &none           &none            &none  &none  &none  &none
+&none  &none           &none           &none            &none  &none  &kp LEFT_ARROW  &kp RIGHT_ARROW                       &none
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         MOUSE {
             bindings = <
-&none  &none  &none  &none  &none                   &none     &none  &none      &none      &none
-&none  &none  &none  &none  &none  &none  &none     &none     &mo 5  &none      &none      &none
-&none  &none  &none  &none  &none  &none  &kp F3    &none     &none  &mkp LCLK  &mkp RCLK  &none
-&none  &none  &none  &none  &none  &none  &mkp MB5  &mkp MB4                               &none
+&none  &none  &none  &none  &none                &ret_kp Y  &none      &none      &none      &none
+&none  &none  &none  &none  &none  &none  &none  &ret_kp H  &mo 5      &none      &none      &none
+&none  &none  &none  &none  &none  &none  &none  &ret_kp N  &ret_kp M  &mkp LCLK  &mkp RCLK  &none
+&none  &none  &none  &none  &none  &none  &none  &none                                       &none
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -161,13 +176,13 @@
 
         SCROLL {
             bindings = <
-&kp Q           &kp UP_ARROW    &kp E            &kp R     &kp T                        &kp Y  &kp U  &kp I      &kp O       &kp P
-&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp F     &kp G        &kp N1  &kp N2  &kp H  &kp J  &kp K      &kp L       &kp ENTER
-&kp Z           &kp X           &kp C            &kp V     &kp B        &kp N3  &kp N4  &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
-&kp RSHIFT      &kp LCTRL       &kp LGUI         &kp LALT  &lt 1 SPACE  &kp N5  &kp N6  &to 0                                &kp BSPC
+&none  &none  &none  &none  &none                                        &none                &none      &none  &none  &none
+&none  &none  &none  &none  &none        &none       &none               &none                &none      &none  &none  &none
+&none  &none  &none  &none  &none        &kp K_CUT   &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp LG(W)  &none  &none  &none
+&none  &none  &none  &none  &kp K_PASTE  &kp K_COPY  &kp LS(RC(TAB))     &kp RC(TAB)                                   &none
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         layer_6 {
