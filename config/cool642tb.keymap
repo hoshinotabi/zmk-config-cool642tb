@@ -54,6 +54,16 @@
             bindings = <&kp MINUS>;
             key-positions = <7 8>;
         };
+
+        comb8_layer_arrow {
+            bindings = <&mo 3>;
+            key-positions = <32 33>;
+        };
+
+        comb9_layer_function {
+            bindings = <&mo 1>;
+            key-positions = <33 32 31>;
+        };
     };
 
     macros {
@@ -121,10 +131,10 @@
 
         default_layer {
             bindings = <
-&kp Q               &kp W     &kp E         &kp R        &kp T                                   &kp Y          &kp U    &kp I      &kp O      &kp P
-&mt LEFT_CONTROL A  &kp S     &kp D         &kp F        &kp G  &to 1  &kp C_VOLUME_UP           &kp H          &lt 5 J  &kp K      &kp L      &kp ENTER
-&kp Z               &kp X     &kp C         &kp V        &kp B  &none  &mt K_MUTE C_VOLUME_DOWN  &kp N          &kp M    &mkp LCLK  &mkp RCLK  &kp RIGHT_SHIFT
-&kp LEFT_SHIFT      &kp LALT  &kp LEFT_ALT  &cmd_to_cmd  &mo 3  &mo 2  &kp SPACE                 &kp BACKSPACE                                 &play_pause_n_p
+&kp Q               &kp W     &kp E        &kp R        &kp T                                   &kp Y          &kp U    &kp I      &kp O      &kp P
+&mt LEFT_CONTROL A  &kp S     &kp D        &kp F        &kp G  &to 1  &kp C_VOLUME_UP           &kp H          &lt 5 J  &kp K      &kp L      &kp ENTER
+&kp Z               &kp X     &kp C        &kp V        &kp B  &none  &mt K_MUTE C_VOLUME_DOWN  &kp N          &kp M    &mkp LCLK  &mkp RCLK  &mo 2
+&kp LEFT_SHIFT      &kp LALT  &cmd_to_cmd  &cmd_to_cmd  &mo 3  &mo 1  &kp SPACE                 &kp BACKSPACE                                 &play_pause_n_p
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -143,10 +153,10 @@
 
         NUM {
             bindings = <
-&kp CLEAR     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp BACKSPACE                    &none  &none  &none  &none  &none
-&kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS      &none      &none  &none  &none  &none  &none  &none
-&kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS       &kp ENTER  &none  &none  &none  &none  &none  &none
-&none         &kp NUMBER_0  &kp NUMBER_0  &kp PERIOD    &kp EQUAL      &none      &none  &none                       &none
+&kp BACKSPACE  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp CLEAR                   &none  &none  &none  &none  &none
+&kp MINUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH     &none  &none  &none  &none  &none  &none  &none
+&kp PLUS       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ASTERISK  &none  &none  &none  &none  &none  &none  &none
+&kp EQUAL      &kp PERIOD    &kp NUMBER_0  &kp NUMBER_0  &kp ENTER     &none  &none  &none                       &none
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -165,10 +175,10 @@
 
         MOUSE {
             bindings = <
-&none               &none             &none             &none                 &none                &ret_kp Y  &none      &none      &none      &none
-&none               &none             &none             &none                 &none  &none  &none  &ret_kp H  &mo 5      &none      &none      &none
-&none               &none             &none             &none                 &none  &none  &none  &ret_kp N  &ret_kp M  &mkp LCLK  &mkp RCLK  &kp RIGHT_SHIFT
-&ret_kp LEFT_SHIFT  &ret_kp LEFT_ALT  &ret_kp LEFT_ALT  &ret_kp LEFT_COMMAND  &none  &none  &none  &none                                       &none
+&none               &none             &none  &none  &none                &ret_kp Y  &none      &none      &none      &none
+&none               &none             &none  &none  &none  &none  &none  &ret_kp H  &mo 5      &none      &none      &none
+&none               &none             &none  &none  &none  &none  &none  &ret_kp N  &ret_kp M  &mkp LCLK  &mkp RCLK  &kp RIGHT_SHIFT
+&ret_kp LEFT_SHIFT  &ret_kp LEFT_ALT  &none  &none  &none  &none  &none  &none                                       &none
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -183,17 +193,6 @@
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
-        };
-
-        layer_6 {
-            bindings = <
-&kp Q       &kp W      &kp E     &kp R     &kp T                        &kp Y        &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S      &kp D     &kp F     &kp G        &kp N1  &kp N2  &kp H        &kp J  &kp K      &kp L       &kp ENTER
-&kp Z       &kp X      &kp C     &kp V     &kp B        &kp N3  &kp N4  &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
-&kp RSHIFT  &kp LCTRL  &kp LGUI  &kp LALT  &lt 1 SPACE  &kp N5  &kp N6  &lt 2 SPACE                                &kp BSPC
-            >;
-
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
     };
 };
