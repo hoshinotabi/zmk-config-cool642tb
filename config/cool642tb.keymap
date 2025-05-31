@@ -143,10 +143,10 @@
 
         NUM {
             bindings = <
-&kp CLEAR     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp BACKSPACE                &none  &none  &none  &none  &none
-&kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS      &none  &none  &none  &none  &none  &none  &none
-&kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS       &none  &none  &none  &none  &none  &none  &none
-&none         &kp NUMBER_0  &kp NUMBER_0  &kp PERIOD    &kp EQUAL      &none  &none  &none                       &none
+&kp CLEAR     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp BACKSPACE                    &none  &none  &none  &none  &none
+&kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS      &none      &none  &none  &none  &none  &none  &none
+&kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS       &kp ENTER  &none  &none  &none  &none  &none  &none
+&none         &kp NUMBER_0  &kp NUMBER_0  &kp PERIOD    &kp EQUAL      &none      &none  &none                       &none
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -165,10 +165,10 @@
 
         MOUSE {
             bindings = <
-&none  &none  &none  &none  &none                &ret_kp Y  &none      &none      &none      &none
-&none  &none  &none  &none  &none  &none  &none  &ret_kp H  &mo 5      &none      &none      &none
-&none  &none  &none  &none  &none  &none  &none  &ret_kp N  &ret_kp M  &mkp LCLK  &mkp RCLK  &none
-&none  &none  &none  &none  &none  &none  &none  &none                                       &none
+&none               &none             &none             &none                 &none                &ret_kp Y  &none      &none      &none      &none
+&none               &none             &none             &none                 &none  &none  &none  &ret_kp H  &mo 5      &none      &none      &none
+&none               &none             &none             &none                 &none  &none  &none  &ret_kp N  &ret_kp M  &mkp LCLK  &mkp RCLK  &kp RIGHT_SHIFT
+&ret_kp LEFT_SHIFT  &ret_kp LEFT_ALT  &ret_kp LEFT_ALT  &ret_kp LEFT_COMMAND  &none  &none  &none  &none                                       &none
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -176,10 +176,10 @@
 
         SCROLL {
             bindings = <
-&none  &none  &none  &none  &none                                        &none                &none      &none  &none  &none
-&none  &none  &none  &none  &none        &none       &none               &none                &none      &none  &none  &none
-&none  &none  &none  &none  &none        &kp K_CUT   &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp LG(W)  &none  &none  &none
-&none  &none  &none  &none  &kp K_PASTE  &kp K_COPY  &kp LS(RC(TAB))     &kp RC(TAB)                                   &none
+&none  &none          &kp C_VOLUME_UP    &none             &none                                        &none                &none      &none  &none  &none
+&none  &kp LESS_THAN  &none              &kp GREATER_THAN  &none        &none       &none               &none                &none      &none  &none  &none
+&none  &none          &kp C_VOLUME_DOWN  &none             &none        &kp K_CUT   &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp LG(W)  &none  &none  &none
+&none  &none          &none              &none             &kp K_PASTE  &kp K_COPY  &kp LS(RC(TAB))     &kp RC(TAB)                                   &none
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
