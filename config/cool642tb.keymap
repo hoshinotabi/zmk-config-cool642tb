@@ -153,10 +153,10 @@
 
         FUNCTION {
             bindings = <
-&none      &none        &none         &none       &none                                              &none            &none         &none                 &none                  &none
-&kp LCTRL  &kp AT_SIGN  &kp HASH      &kp DOLLAR  &kp PERCENT   &to 2             &kp INT_MUHENKAN   &kp AMPERSAND    &kp SQT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ENTER
-&kp PLUS   &kp MINUS    &kp ASTERISK  &kp SLASH   &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp TILDE        &kp QUESTION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION
-&kp LSHFT  &kp LALT     &kp LGUI      &kp LGUI    &bt BT_SEL 2  &none             &kp LEFT_ARROW     &kp RIGHT_ARROW                                                             &kp LEFT_SHIFT
+&none      &none           &kp UP_ARROW    &none            &none                                        &none            &none         &none                 &none                  &none
+&kp LCTRL  &kp LEFT_ARROW  &kp HASH        &kp RIGHT_ARROW  &kp PERCENT   &to 2       &kp INT_MUHENKAN   &kp AMPERSAND    &kp SQT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ENTER
+&kp PLUS   &kp MINUS       &kp DOWN_ARROW  &kp SLASH        &kp EQUAL     &JpBracket  &kp RIGHT_BRACKET  &kp TILDE        &kp QUESTION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION
+&kp LSHFT  &kp LALT        &kp LGUI        &kp LGUI         &bt BT_SEL 2  &atmark     &kp LEFT_ARROW     &kp RIGHT_ARROW                                                             &kp LEFT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -164,10 +164,10 @@
 
         NUM {
             bindings = <
-&kp MINUS  &kp N9      &kp NUMBER_8  &kp N7        &kp CLEAR                         &none      &kp N7  &kp N8  &kp N9  &kp MINUS
-&kp PLUS   &kp N6      &kp NUMBER_5  &kp N4        &kp SLASH     &none    &none      &none      &kp N4  &kp N5  &kp N6  &none
-&kp EQUAL  &kp N3      &kp NUMBER_2  &kp N1        &kp ASTERISK  &kp RET  &kp COMMA  &kp N0     &kp N1  &kp N2  &kp N3  &kp PLUS
-&kp COMMA  &kp PERIOD  &kp NUMBER_0  &kp NUMBER_0  &kp BSPC      &kp RET  &kp BSPC   &kp SPACE                          &kp DOT
+&kp MINUS       &kp N9      &kp NUMBER_8  &kp N7        &kp CLEAR                         &none      &kp N7  &kp N8  &kp N9  &kp MINUS
+&kp PLUS        &kp N6      &kp NUMBER_5  &kp N4        &kp SLASH     &none    &none      &none      &kp N4  &kp N5  &kp N6  &none
+&kp EQUAL       &kp N3      &kp NUMBER_2  &kp N1        &kp ASTERISK  &kp RET  &kp COMMA  &kp N0     &kp N1  &kp N2  &kp N3  &kp PLUS
+&kp LEFT_SHIFT  &kp PERIOD  &kp NUMBER_0  &kp NUMBER_0  &kp BSPC      &kp RET  &kp BSPC   &kp SPACE                          &kp DOT
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
