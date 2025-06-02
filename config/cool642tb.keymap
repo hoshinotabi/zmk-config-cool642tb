@@ -89,14 +89,14 @@
         atmark: atmark {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp AT_SIGN>;
+            bindings = <&kp JP_EISU &kp AT_SIGN>;
             label = "ATMARK";
         };
 
         JpBracket: JpBracket {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_1 &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp ENTER &kp LEFT_ARROW>;
+            bindings = <&kp JP_KANA &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp ENTER &kp LEFT_ARROW>;
             label = "JPBRACKET";
         };
     };
