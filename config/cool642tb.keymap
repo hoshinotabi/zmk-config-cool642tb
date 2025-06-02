@@ -42,7 +42,7 @@
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <9 8>;
             timeout-ms = <0>;
-            layers = <2>;
+            layers = <3>;
         };
 
         comb6_middleclick {
@@ -61,7 +61,7 @@
         };
 
         comb9_layer_function {
-            bindings = <&mo 2>;
+            bindings = <&mo 3>;
             key-positions = <19 21 20>;
         };
     };
@@ -70,7 +70,7 @@
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 1 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&to 2 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
 
@@ -78,7 +78,7 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&to 1 &macro_param_1to1>,
+                <&to 2 &macro_param_1to1>,
                 <&macro_press>,
                 <&kp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
@@ -132,9 +132,9 @@
         default_layer {
             bindings = <
 &kp Q               &kp W     &kp E        &kp R        &kp T                                   &kp Y      &kp U    &kp I      &kp O      &kp P
-&mt LEFT_CONTROL A  &kp S     &kp D        &kp F        &kp G  &to 1  &kp C_VOLUME_UP           &kp H      &lt 5 J  &kp K      &kp L      &mo 2
+&mt LEFT_CONTROL A  &kp S     &kp D        &kp F        &kp G  &to 2  &kp C_VOLUME_UP           &kp H      &lt 5 J  &kp K      &kp L      &mo 3
 &kp Z               &kp X     &kp C        &kp V        &kp B  &none  &mt K_MUTE C_VOLUME_DOWN  &kp N      &kp M    &mkp LCLK  &mkp RCLK  &kp ENTER
-&kp LEFT_SHIFT      &kp LALT  &cmd_to_cmd  &cmd_to_cmd  &mo 3  &mo 2  &kp BSPC                  &kp SPACE                                 &play_pause_n_p
+&kp LEFT_SHIFT      &kp LALT  &cmd_to_cmd  &cmd_to_cmd  &mo 3  &mo 3  &kp BSPC                  &kp SPACE                                 &play_pause_n_p
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -142,10 +142,10 @@
 
         FUNCTION {
             bindings = <
-&kp N1           &kp N2       &kp N3        &kp N4        &kp N5                                             &kp N6           &kp N7        &kp N8                &kp N9                 &kp N0
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH      &kp DOLLAR    &kp PERCENT   &to 1             &kp INT_MUHENKAN   &kp AMPERSAND    &kp SQT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ENTER
-&kp PLUS         &kp MINUS    &kp ASTERISK  &kp SLASH     &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp TILDE        &kp QUESTION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION
-&bt BT_PRV       &bt BT_NXT   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none             &kp LEFT_ARROW     &kp RIGHT_ARROW                                                             &kp LEFT_SHIFT
+&kp N1     &kp N2       &kp N3        &kp N4      &kp N5                                             &kp N6           &kp N7        &kp N8                &kp N9                 &kp N0
+&kp LCTRL  &kp AT_SIGN  &kp HASH      &kp DOLLAR  &kp PERCENT   &to 2             &kp INT_MUHENKAN   &kp AMPERSAND    &kp SQT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ENTER
+&kp PLUS   &kp MINUS    &kp ASTERISK  &kp SLASH   &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp TILDE        &kp QUESTION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION
+&kp LSHFT  &kp LALT     &kp LGUI      &kp LGUI    &bt BT_SEL 2  &none             &kp LEFT_ARROW     &kp RIGHT_ARROW                                                             &kp LEFT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -186,10 +186,10 @@
 
         SCROLL {
             bindings = <
-&none      &none     &kp UP         &none        &none                                    &none                &none      &none               &none                &none
-&kp RCTRL  &kp LEFT  &kp LA(LS(F))  &kp RIGHT    &none      &none      &kp C_VOLUME_UP    &none                &none      &kp LEFT            &kp RIGHT            &none
-&none      &none     &kp DOWN       &none        &none      &kp LG(X)  &kp C_VOLUME_DOWN  &kp LC(RIGHT_ARROW)  &kp LG(W)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &none
-&kp LSHFT  &kp LALT  &cmd_to_cmd    &cmd_to_cmd  &kp LG(V)  &kp LG(C)  &kp LS(RC(TAB))    &kp RC(TAB)                                                              &none
+&none      &kp C_AC_HOME  &kp UP         &kp PAGE_UP    &none                                    &none        &none      &none               &none                &none
+&kp RCTRL  &kp LEFT       &kp LA(LS(F))  &kp RIGHT      &none      &none      &kp C_VOLUME_UP    &none        &none      &kp LEFT            &kp RIGHT            &none
+&none      &kp END        &kp DOWN       &kp PAGE_DOWN  &none      &kp LG(X)  &kp C_VOLUME_DOWN  &none        &kp LG(W)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &none
+&kp LSHFT  &kp LALT       &cmd_to_cmd    &cmd_to_cmd    &kp LG(V)  &kp LG(C)  &kp LS(RC(TAB))    &kp RC(TAB)                                                      &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
