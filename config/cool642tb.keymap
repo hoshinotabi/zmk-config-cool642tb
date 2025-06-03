@@ -13,6 +13,7 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
+    tapping-term-ms = <300>;
 };
 
 / {
@@ -44,7 +45,7 @@
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <9 8>;
             timeout-ms = <0>;
-            layers = <1>;
+            layers = <2>;
         };
 
         comb6_middleclick {
@@ -58,8 +59,13 @@
         };
 
         comb8_layer_arrow {
-            bindings = <&mo 3>;
-            key-positions = <21 20>;
+            bindings = <&mo 2>;
+            key-positions = <20 21>;
+        };
+
+        MOUSEDETAIL {
+            bindings = <&sl 3>;
+            key-positions = <18 7>;
         };
     };
 
@@ -143,9 +149,9 @@
         default_layer {
             bindings = <
 &kp Q               &kp W     &kp E        &kp R        &kp T                                   &kp Y      &kp U    &kp I      &kp O      &kp P
-&mt LEFT_CONTROL A  &kp S     &kp D        &kp F        &kp G  &to 1  &kp C_VOLUME_UP           &kp H      &lt 5 J  &kp K      &kp L      &mo 2
-&kp Z               &kp X     &kp C        &kp V        &kp B  &none  &mt K_MUTE C_VOLUME_DOWN  &kp N      &lt 3 M  &mkp LCLK  &mkp RCLK  &kp ENTER
-&kp LEFT_SHIFT      &kp LALT  &cmd_to_cmd  &cmd_to_cmd  &mo 1  &mo 2  &kp BSPC                  &kp SPACE                                 &play_pause_n_p
+&mt LEFT_CONTROL A  &kp S     &kp D        &kp F        &kp G  &to 2  &kp C_VOLUME_UP           &kp H      &lt 5 J  &kp K      &kp L      &kp ENTER
+&kp Z               &kp X     &kp C        &kp V        &kp B  &none  &mt K_MUTE C_VOLUME_DOWN  &kp N      &lt 3 M  &mkp LCLK  &mkp RCLK  &mo 1
+&kp LEFT_SHIFT      &kp LALT  &cmd_to_cmd  &cmd_to_cmd  &mo 2  &mo 3  &kp BSPC                  &kp SPACE                                 &play_pause_n_p
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -154,7 +160,7 @@
         FUNCTION {
             bindings = <
 &none      &none           &kp UP_ARROW    &none            &none                                        &none            &none         &none                 &none                  &none
-&kp LCTRL  &kp LEFT_ARROW  &kp HASH        &kp RIGHT_ARROW  &kp PERCENT   &to 2       &kp INT_MUHENKAN   &kp AMPERSAND    &kp SQT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ENTER
+&kp LCTRL  &kp LEFT_ARROW  &kp HASH        &kp RIGHT_ARROW  &kp PERCENT   &to 3       &kp INT_MUHENKAN   &kp AMPERSAND    &kp SQT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ENTER
 &kp PLUS   &kp MINUS       &kp DOWN_ARROW  &kp SLASH        &kp EQUAL     &JpBracket  &kp RIGHT_BRACKET  &kp TILDE        &kp QUESTION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION
 &kp LSHFT  &kp LALT        &kp LGUI        &kp LGUI         &bt BT_SEL 2  &atmark     &kp LEFT_ARROW     &kp RIGHT_ARROW                                                             &kp LEFT_SHIFT
             >;
