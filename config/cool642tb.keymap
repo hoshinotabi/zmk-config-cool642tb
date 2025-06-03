@@ -202,9 +202,9 @@
 
         NUM {
             bindings = <
-&kp MINUS  &kp N9      &kp NUMBER_8  &kp N7        &kp PERCENT                             &none      &kp N7  &kp N8  &kp N9  &kp MINUS
-&kp PLUS   &kp N6      &kp NUMBER_5  &kp N4        &kp SLASH     &none          &none      &none      &kp N4  &kp N5  &kp N6  &none
-&kp EQUAL  &kp N3      &kp NUMBER_2  &kp N1        &kp ASTERISK  &kp BACKSPACE  &kp COMMA  &kp N0     &kp N1  &kp N2  &kp N3  &kp PLUS
+&kp MINUS  &kp N7      &kp NUMBER_8  &kp N9        &kp PERCENT                             &none      &kp N7  &kp N8  &kp N9  &kp MINUS
+&kp PLUS   &kp N4      &kp NUMBER_5  &kp N6        &kp SLASH     &none          &none      &none      &kp N4  &kp N5  &kp N6  &none
+&kp EQUAL  &kp N1      &kp NUMBER_2  &kp N3        &kp ASTERISK  &kp BACKSPACE  &kp COMMA  &kp N0     &kp N1  &kp N2  &kp N3  &kp PLUS
 &kp COMMA  &kp PERIOD  &kp NUMBER_0  &kp NUMBER_0  &kp SPACE     &kp RET        &kp BSPC   &kp SPACE                          &kp DOT
             >;
 
