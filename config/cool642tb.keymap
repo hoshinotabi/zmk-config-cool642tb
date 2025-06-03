@@ -144,7 +144,7 @@
             bindings = <
 &kp Q               &kp W     &kp E        &kp R        &kp T                                   &kp Y      &kp U    &kp I      &kp O      &kp P
 &mt LEFT_CONTROL A  &kp S     &kp D        &kp F        &kp G  &to 1  &kp C_VOLUME_UP           &kp H      &lt 5 J  &kp K      &kp L      &mo 2
-&kp Z               &kp X     &kp C        &kp V        &kp B  &none  &mt K_MUTE C_VOLUME_DOWN  &kp N      &kp M    &mkp LCLK  &mkp RCLK  &kp ENTER
+&kp Z               &kp X     &kp C        &kp V        &kp B  &none  &mt K_MUTE C_VOLUME_DOWN  &kp N      &lt 3 M  &mkp LCLK  &mkp RCLK  &kp ENTER
 &kp LEFT_SHIFT      &kp LALT  &cmd_to_cmd  &cmd_to_cmd  &mo 1  &mo 2  &kp BSPC                  &kp SPACE                                 &play_pause_n_p
             >;
 
@@ -173,7 +173,7 @@
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
-        ARROW {
+        MOUSEDETAIL {
             bindings = <
 &none           &kp C_AC_HOME   &kp UP_ARROW    &kp PAGE_UP      &none                         &none            &none  &none  &none  &none
 &kp RCTRL       &kp LEFT_ARROW  &none           &kp RIGHT_ARROW  &none  &none  &none           &none            &none  &none  &none  &none
