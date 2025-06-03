@@ -217,10 +217,10 @@
 
         SCROLL {
             bindings = <
-&none      &kp HOME  &kp UP         &kp PAGE_UP    &none                                       &none                  &none        &none               &none                &kp LG(W)
-&kp RCTRL  &kp LEFT  &kp LA(LS(F))  &kp RIGHT      &none      &none      &kp C_VOLUME_UP       &none                  &none        &kp LEFT            &kp RIGHT            &none
-&none      &kp END   &kp DOWN       &kp PAGE_DOWN  &none      &kp LG(X)  &kp C_VOLUME_DOWN     &kp LS(RC(TAB))        &kp RC(TAB)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &none
-&kp LSHFT  &kp LALT  &cmd_to_cmd    &cmd_to_cmd    &kp LG(V)  &kp LG(C)  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)                                                        &none
+&none      &kp HOME  &kp UP         &kp PAGE_UP    &none                                                  &none                  &none        &none               &none                &kp LG(W)
+&kp RCTRL  &kp LEFT  &kp LA(LS(F))  &kp RIGHT      &kp LG(C)       &none            &kp C_VOLUME_UP       &none                  &none        &kp LESS_THAN       &kp GREATER_THAN     &none
+&none      &kp END   &kp DOWN       &kp PAGE_DOWN  &kp LG(V)       &kp LG(X)        &kp C_VOLUME_DOWN     &kp LS(RC(TAB))        &kp RC(TAB)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &none
+&kp LSHFT  &kp LALT  &cmd_to_cmd    &cmd_to_cmd    &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)                                                        &none
             >;
 
             sensor-bindings = <&inc_dec_kp LG(EQUAL) LG(MINUS)>;
