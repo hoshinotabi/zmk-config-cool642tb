@@ -21,7 +21,7 @@
 &mkp_input_listener {
     input-processors = <&zip_temp_layer MOUSEDETAIL 100000>;
 };
-J
+
 / {
     combos {
         compatible = "zmk,combos";
