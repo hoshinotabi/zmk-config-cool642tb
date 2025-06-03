@@ -175,10 +175,10 @@
 
         MOUSEDETAIL {
             bindings = <
-&none           &kp C_AC_HOME   &kp UP_ARROW    &kp PAGE_UP      &none                         &none            &none  &none  &none  &none
-&kp RCTRL       &kp LEFT_ARROW  &none           &kp RIGHT_ARROW  &none  &none  &none           &none            &none  &none  &none  &none
-&none           &kp END         &kp DOWN_ARROW  &kp PAGE_DOWN    &none  &none  &none           &none            &none  &none  &none  &none
-&kp LEFT_SHIFT  &kp LALT        &kp LGUI        &kp LGUI         &none  &none  &kp LEFT_ARROW  &kp RIGHT_ARROW                       &none
+&none           &kp C_AC_HOME   &kp UP_ARROW    &kp PAGE_UP      &none                            &ret_kp Y        &none      &none      &none      &none
+&kp RCTRL       &kp LEFT_ARROW  &none           &kp RIGHT_ARROW  &none  &none  &kp C_VOLUME_UP    &ret_kp H        &mo 5      &none      &none      &none
+&none           &kp END         &kp DOWN_ARROW  &kp PAGE_DOWN    &none  &none  &kp C_VOLUME_DOWN  &ret_kp N        &ret_kp M  &mkp LCLK  &mkp RCLK  &kp RIGHT_SHIFT
+&kp LEFT_SHIFT  &kp LALT        &kp LGUI        &kp LGUI         &none  &none  &kp LEFT_ARROW     &kp RIGHT_ARROW                                   &none
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
