@@ -173,10 +173,10 @@
 
         SYMBOLS {
             bindings = <
-&kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp HASH     &kp RIGHT_PARENTHESIS  &kp PERCENT                                         &kp CARET      &kp AMPERSAND  &kp                   &kp                    &kp
-&kp LCTRL        &kp LESS_THAN         &kp AT_SIGN  &kp GREATER_THAN       &kp BACKSLASH   &none            &kp INT_MUHENKAN   &kp AMPERSAND  &kp SQT        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ENTER
-&kp PLUS         &kp LEFT_BRACKET      &JpBracket   &kp RIGHT_BRACKET      &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp TILDE      &kp QUESTION   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION
-&kp LSHFT        &kp LEFT_ALT          &cmd_to_cmd  &cmd_to_cmd            &kp COMMA       &kp PERIOD       &kp BACKSPACE      &kp SPACE                                                                  &kp LEFT_SHIFT
+&kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp HASH     &kp RIGHT_PARENTHESIS  &kp DOLLAR                                      &none      &none  &none  &none  &none
+&kp LCTRL        &kp LESS_THAN         &kp AT_SIGN  &kp GREATER_THAN       &kp BACKSLASH   &none            &none          &none      &none  &none  &none  &kp ENTER
+&kp AMPERSAND    &kp LEFT_BRACKET      &JpBracket   &kp RIGHT_BRACKET      &kp LEFT_BRACE  &kp RIGHT_BRACE  &none          &none      &none  &none  &none  &none
+&kp LSHFT        &kp LEFT_ALT          &cmd_to_cmd  &cmd_to_cmd            &kp SEMI        &kp SQT          &kp BACKSPACE  &kp SPACE                       &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
