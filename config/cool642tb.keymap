@@ -155,6 +155,13 @@
             #binding-cells = <0>;
             bindings = <&kp C_VOLUME_DOWN>, <&kp C_VOLUME_UP>;
         };
+
+        BIKKURI_HATENA: BIKKURI_HATENA {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BIKKURI_HATENA";
+            #binding-cells = <0>;
+            bindings = <&kp EXCLAMATION>, <&kp QUESTION>;
+        };
     };
 
     keymap {
@@ -173,7 +180,7 @@
 
         SYMBOLS {
             bindings = <
-&kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp HASH     &kp RIGHT_PARENTHESIS  &kp DOLLAR                                      &none      &none  &none  &none  &none
+&BIKKURI_HATENA  &kp LEFT_PARENTHESIS  &kp HASH     &kp RIGHT_PARENTHESIS  &kp DOLLAR                                      &none      &none  &none  &none  &none
 &kp LCTRL        &kp LESS_THAN         &kp AT_SIGN  &kp GREATER_THAN       &kp BACKSLASH   &none            &none          &none      &none  &none  &none  &kp ENTER
 &kp AMPERSAND    &kp LEFT_BRACKET      &JpBracket   &kp RIGHT_BRACKET      &kp LEFT_BRACE  &kp RIGHT_BRACE  &none          &none      &none  &none  &none  &none
 &kp LSHFT        &kp LEFT_ALT          &cmd_to_cmd  &cmd_to_cmd            &kp SEMI        &kp SQT          &kp BACKSPACE  &kp SPACE                       &none
