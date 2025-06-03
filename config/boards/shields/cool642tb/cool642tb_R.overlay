@@ -20,16 +20,11 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-//追記　精密モード
+
         precision_boost {
             layers = <MOUSEDETAIL>;
             input-processors = <&zip_xy_scaler 1 3>;
         };
-
-        fast_boost {
-            layers = <FUNCTION>;
-            input-processors = <&zip_xy_scaler 5 1>;
-        };//追記　精密モード
     };
 };
 
