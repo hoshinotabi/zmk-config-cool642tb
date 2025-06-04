@@ -69,7 +69,7 @@
 
         MOUSEDETAIL {
             bindings = <&tog 3>;
-            key-positions = <18 40>;
+            key-positions = <18 41>;
         };
     };
 
@@ -152,6 +152,8 @@
             label = "CMD_TO_CMD";
             #binding-cells = <0>;
             bindings = <&kp LEFT_COMMAND>, <&kp RIGHT_COMMAND>;
+
+            tapping-term-ms = <200>;
         };
 
         play_pause_n_p: play_pause_n_p {
@@ -166,6 +168,8 @@
             label = "KUDOKUTEN";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp PERIOD>;
+
+            tapping-term-ms = <300>;
         };
 
         VOL_UP_DOWN: VOL_UP_DOWN {
@@ -180,6 +184,8 @@
             label = "BIKKURI_HATENA";
             #binding-cells = <0>;
             bindings = <&kp EXCLAMATION>, <&kp QUESTION>;
+
+            tapping-term-ms = <200>;
         };
 
         NUM1_SYMBOLLL2: NUM1_SYMBOLLL2 {
@@ -187,6 +193,8 @@
             label = "NUM1_SYMBOLLL2";
             #binding-cells = <0>;
             bindings = <&mo 2>, <&mo 1>;
+
+            tapping-term-ms = <250>;
         };
     };
 
