@@ -226,8 +226,8 @@
         NUM {
             bindings = <
 &kp MINUS  &kp N7      &kp NUMBER_8  &kp N9        &kp PERCENT                             &none      &kp N7  &kp N8  &kp N9  &kp MINUS
-&kp PLUS   &kp N4      &kp NUMBER_5  &kp N6        &kp SLASH     &none          &none      &none      &kp N4  &kp N5  &kp N6  &none
-&kp EQUAL  &kp N1      &kp NUMBER_2  &kp N3        &kp ASTERISK  &kp BACKSPACE  &kp COMMA  &kp N0     &kp N1  &kp N2  &kp N3  &kp PLUS
+&kp PLUS   &kp N4      &kp NUMBER_5  &kp N6        &kp SLASH     &none          &none      &none      &kp N4  &kp N5  &kp N6  &kp PLUS
+&kp EQUAL  &kp N1      &kp NUMBER_2  &kp N3        &kp ASTERISK  &kp BACKSPACE  &kp COMMA  &kp N0     &kp N1  &kp N2  &kp N3  &none
 &kp COMMA  &kp PERIOD  &kp NUMBER_0  &kp NUMBER_0  &kp SPACE     &kp RET        &kp BSPC   &kp SPACE                          &kp DOT
             >;
 
@@ -258,10 +258,10 @@
 
         SCROLL {
             bindings = <
-&none      &kp HOME  &kp UP         &kp PAGE_UP    &none                                                  &none                  &none        &kp LG(C)           &kp LG(V)            &none
-&kp RCTRL  &kp LEFT  &kp LA(LS(F))  &kp RIGHT      &kp LG(C)       &none            &kp C_VOLUME_UP       &none                  &none        &kp LESS_THAN       &kp GREATER_THAN     &none
-&none      &kp END   &kp DOWN       &kp PAGE_DOWN  &kp LG(V)       &kp LG(X)        &kp C_VOLUME_DOWN     &kp LS(RC(TAB))        &kp RC(TAB)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp LG(W)
-&kp LSHFT  &kp LALT  &cmd_to_cmd    &cmd_to_cmd    &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)                                                        &none
+&none      &kp HOME  &kp UP         &kp PAGE_UP    &none                                               &none                 &none                  &kp LG(C)           &kp LG(V)            &none
+&kp RCTRL  &kp LEFT  &kp LA(LS(F))  &kp RIGHT      &kp LG(C)       &none            &kp C_VOLUME_UP    &none                 &none                  &kp LESS_THAN       &kp GREATER_THAN     &none
+&none      &kp END   &kp DOWN       &kp PAGE_DOWN  &kp LG(V)       &kp LG(X)        &kp C_VOLUME_DOWN  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp LG(W)
+&kp LSHFT  &kp LALT  &cmd_to_cmd    &cmd_to_cmd    &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp LC(LS(TAB))    &kp LC(TAB)                                                                           &none
             >;
 
             sensor-bindings = <&inc_dec_kp LG(MINUS) LG(EQUAL)>;
