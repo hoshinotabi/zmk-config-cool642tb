@@ -225,10 +225,10 @@
 
         NUM {
             bindings = <
-&kp MINUS  &kp N7      &kp NUMBER_8  &kp N9        &kp PERCENT                             &none      &kp N7  &kp N8  &kp N9  &kp MINUS
-&kp PLUS   &kp N4      &kp NUMBER_5  &kp N6        &kp SLASH     &none          &none      &none      &kp N4  &kp N5  &kp N6  &kp PLUS
-&kp EQUAL  &kp N1      &kp NUMBER_2  &kp N3        &kp ASTERISK  &kp BACKSPACE  &kp COMMA  &kp N0     &kp N1  &kp N2  &kp N3  &none
-&kp COMMA  &kp PERIOD  &kp NUMBER_0  &kp NUMBER_0  &kp SPACE     &kp RET        &kp BSPC   &kp SPACE                          &kp DOT
+&kp KP_CLEAR  &kp N7      &kp NUMBER_8  &kp N9        &kp PERCENT                            &none      &kp N7  &kp N8  &kp N9  &kp MINUS
+&kp SLASH     &kp N4      &kp NUMBER_5  &kp N6        &kp MINUS    &none          &none      &none      &kp N4  &kp N5  &kp N6  &kp ENTER
+&kp ASTERISK  &kp N1      &kp NUMBER_2  &kp N3        &kp PLUS     &kp BACKSPACE  &kp COMMA  &kp N0     &kp N1  &kp N2  &kp N3  &none
+&kp COMMA     &kp PERIOD  &kp NUMBER_0  &kp NUMBER_0  &kp EQUAL    &kp RET        &kp BSPC   &kp SPACE                          &kp DOT
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -236,10 +236,10 @@
 
         MOUSEDETAIL {
             bindings = <
-&none           &none     &none     &none     &none                                               &ret_kp Y  &none      &none      &none          &none
-&kp RCTRL       &none     &none     &none     &none           &none            &kp C_VOLUME_UP    &ret_kp H  &mo 5      &none      &none          &none
-&none           &none     &none     &none     &none           &none            &kp C_VOLUME_DOWN  &ret_kp N  &ret_kp M  &mkp LCLK  &ret_mkp RCLK  &kp RIGHT_SHIFT
-&kp LEFT_SHIFT  &kp LALT  &kp LGUI  &kp LGUI  &kp LEFT_ARROW  &kp RIGHT_ARROW  &none              &none                                           &none
+&ret_kp Q       &ret_kp W  &ret_kp E  &ret_kp R  &ret_kp T                                         &ret_kp Y      &ret_kp U  &ret_kp I  &ret_kp O      &ret_kp P
+&ret_kp A       &ret_kp S  &ret_kp D  &ret_kp F  &ret_kp G       &none            &kp C_VOLUME_UP  &ret_kp H      &mo 5      &ret_kp K  &ret_kp L      &ret_kp RET
+&ret_kp Z       &ret_kp X  &ret_kp C  &ret_kp V  &ret_kp B       &none            &ret_kp COMMA    &ret_kp N      &ret_kp M  &mkp LCLK  &ret_mkp RCLK  &kp RIGHT_SHIFT
+&kp LEFT_SHIFT  &kp LALT   &kp LGUI   &kp LGUI   &kp LEFT_ARROW  &kp RIGHT_ARROW  &ret_kp BSPC     &ret_kp SPACE                                       &none
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
