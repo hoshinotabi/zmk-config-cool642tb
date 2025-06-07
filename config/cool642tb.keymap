@@ -41,7 +41,7 @@
 
         comb4 {
             bindings = <&kp BACKSPACE>;
-            key-positions = <9 20>;
+            key-positions = <9 8>;
             slow-release;
         };
 
@@ -168,8 +168,6 @@
             label = "KUDOKUTEN";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp PERIOD>;
-
-            tapping-term-ms = <300>;
         };
 
         VOL_UP_DOWN: VOL_UP_DOWN {
@@ -184,8 +182,6 @@
             label = "BIKKURI_HATENA";
             #binding-cells = <0>;
             bindings = <&kp EXCLAMATION>, <&kp QUESTION>;
-
-            tapping-term-ms = <200>;
         };
 
         NUM1_SYMBOLLL2: NUM1_SYMBOLLL2 {
@@ -203,10 +199,10 @@
 
         default_layer {
             bindings = <
-&kp Q               &kp W     &kp E        &kp R        &kp T                                           &kp Y      &kp U    &kp I      &kp O      &kp P
-&mt LEFT_CONTROL A  &kp S     &kp D        &kp F        &kp G           &none            &VOL_UP_DOWN   &kp H      &lt 5 J  &kp K      &kp L      &kp ENTER
-&kp Z               &kp X     &kp C        &kp V        &kp B           &none            &KUDOKUTEN     &kp N      &kp M    &mkp LCLK  &mkp RCLK  &NUM1_SYMBOLLL2
-&kp LEFT_SHIFT      &kp LALT  &cmd_to_cmd  &cmd_to_cmd  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE  &kp SPACE                                 &play_pause_n_p
+&kp Q               &kp W     &kp E        &kp R        &kp T                                     &kp Y            &kp U    &kp I      &kp O      &kp P
+&mt LEFT_CONTROL A  &kp S     &kp D        &kp F        &kp G          &none      &VOL_UP_DOWN    &kp H            &lt 5 J  &kp K      &kp L      &kp ENTER
+&kp Z               &kp X     &kp C        &kp V        &kp B          &none      &KUDOKUTEN      &kp N            &kp M    &mkp LCLK  &mkp RCLK  &NUM1_SYMBOLLL2
+&kp LEFT_SHIFT      &kp LALT  &cmd_to_cmd  &cmd_to_cmd  &kp BACKSPACE  &kp SPACE  &kp LEFT_ARROW  &kp RIGHT_ARROW                                 &play_pause_n_p
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -258,10 +254,10 @@
 
         SCROLL {
             bindings = <
-&none      &kp HOME  &kp UP         &kp PAGE_UP    &none                                               &none                 &none                  &kp LG(C)           &kp LG(V)            &none
-&kp RCTRL  &kp LEFT  &kp LA(LS(F))  &kp RIGHT      &kp LG(C)       &none            &kp C_VOLUME_UP    &none                 &none                  &kp LESS_THAN       &kp GREATER_THAN     &none
-&none      &kp END   &kp DOWN       &kp PAGE_DOWN  &kp LG(V)       &kp LG(X)        &kp C_VOLUME_DOWN  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp LG(W)
-&kp LSHFT  &kp LALT  &cmd_to_cmd    &cmd_to_cmd    &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp LC(LS(TAB))    &kp LC(TAB)                                                                           &none
+&none      &kp HOME  &kp UP         &kp PAGE_UP    &none                                                       &none                 &none                  &kp LG(C)           &kp LG(V)            &none
+&kp RCTRL  &kp LEFT  &kp LA(LS(F))  &kp RIGHT      &kp LG(C)           &none                &kp C_VOLUME_UP    &none                 &none                  &kp LESS_THAN       &kp GREATER_THAN     &none
+&none      &kp END   &kp DOWN       &kp PAGE_DOWN  &kp LG(V)           &kp LG(X)            &kp C_VOLUME_DOWN  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp LG(W)
+&kp LSHFT  &kp LALT  &cmd_to_cmd    &cmd_to_cmd    &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &kp LC(LS(TAB))    &kp LC(TAB)                                                                           &none
             >;
 
             sensor-bindings = <&inc_dec_kp LG(MINUS) LG(EQUAL)>;
