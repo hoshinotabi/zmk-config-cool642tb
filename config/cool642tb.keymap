@@ -215,10 +215,10 @@
 
         SYMBOLS {
             bindings = <
-&kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp HASH     &kp RIGHT_PARENTHESIS  &kp DOLLAR                                   &none      &none  &none  &none  &none
-&kp QUESTION     &kp LESS_THAN         &kp AT_SIGN  &kp GREATER_THAN       &kp BACKSLASH   &none            &none       &none      &none  &none  &none  &kp ENTER
-&kp AMPERSAND    &kp LEFT_BRACKET      &JpBracket   &kp RIGHT_BRACKET      &kp LEFT_BRACE  &kp RIGHT_BRACE  &none       &none      &none  &none  &none  &none
-&kp LSHFT        &kp LEFT_SHIFT        &kp LALT     &cmd_to_cmd            &kp SEMI        &kp SQT          &KUDOKUTEN  &kp SPACE                       &none
+&kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp HASH     &kp RIGHT_PARENTHESIS  &kp DOLLAR                                    &none      &none  &none  &none  &none
+&kp QUESTION     &kp LESS_THAN         &kp AT_SIGN  &kp GREATER_THAN       &kp BACKSLASH   &none             &none       &none      &none  &none  &none  &kp ENTER
+&kp AMPERSAND    &kp LEFT_BRACKET      &JpBracket   &kp RIGHT_BRACKET      &kp LEFT_BRACE  &kp SINGLE_QUOTE  &none       &none      &none  &none  &none  &none
+&kp LSHFT        &kp LEFT_SHIFT        &kp LALT     &cmd_to_cmd            &kp BACKSPACE   &kp SEMICOLON     &KUDOKUTEN  &kp SPACE                       &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -226,10 +226,10 @@
 
         NUM {
             bindings = <
-&kp COMMA       &kp N7          &kp NUMBER_8  &kp N9        &kp PERCENT                           &none      &kp N7  &kp N8  &kp N9  &kp MINUS
-&kp SLASH       &kp N4          &kp NUMBER_5  &kp N6        &kp MINUS      &none      &none       &none      &kp N4  &kp N5  &kp N6  &kp ENTER
-&kp ASTERISK    &kp N1          &kp NUMBER_2  &kp N3        &kp PLUS       &kp EQUAL  &kp COMMA   &kp N0     &kp N1  &kp N2  &kp N3  &none
-&kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp NUMBER_0  &kp NUMBER_0  &kp BACKSPACE  &none      &KUDOKUTEN  &kp SPACE                          &kp DOT
+&kp DOLLAR      &kp N7          &kp NUMBER_8  &kp N9        &kp PERCENT                              &kp HASH         &kp AMPERSAND     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
+&kp SLASH       &kp N4          &kp NUMBER_5  &kp N6        &kp MINUS      &none      &kp BACKSLASH  &kp EXCLAMATION  &kp QUESTION      &kp LESS_THAN         &kp GREATER_THAN       &kp ENTER
+&kp ASTERISK    &kp N1          &kp NUMBER_2  &kp N3        &kp PLUS       &kp EQUAL  &kp SLASH      &kp SEMICOLON    &kp SINGLE_QUOTE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none
+&kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp NUMBER_0  &kp NUMBER_0  &kp BACKSPACE  &none      &KUDOKUTEN     &kp SPACE                                                                       &none
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
