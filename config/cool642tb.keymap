@@ -204,10 +204,10 @@
 
         default_layer {
             bindings = <
-&kp Q               &kp W           &kp E     &kp R        &kp T                                         &kp Y      &kp U    &kp I      &kp O      &kp P
-&mt LEFT_CONTROL A  &kp S           &kp D     &kp F        &kp G          &none            &VOL_UP_DOWN  &kp H      &lt 5 J  &kp K      &kp L      &kp ENTER
-&kp Z               &kp X           &kp C     &kp V        &kp B          &kp LEFT_ARROW   &none         &kp N      &kp M    &mkp LCLK  &mkp RCLK  &NUM1_SYMBOLLL2
-&kp LEFT_SHIFT      &kp LEFT_SHIFT  &kp LALT  &cmd_to_cmd  &kp BACKSPACE  &kp RIGHT_ARROW  &KUDOKUTEN    &kp SPACE                                 &play_pause_n_p
+&kp Q               &kp W           &kp E     &kp R        &kp T                                     &kp Y          &kp U    &kp I      &kp O      &kp P
+&mt LEFT_CONTROL A  &kp S           &kp D     &kp F        &kp G      &none            &VOL_UP_DOWN  &kp H          &lt 5 J  &kp K      &kp L      &kp ENTER
+&kp Z               &kp X           &kp C     &kp V        &kp B      &kp LEFT_ARROW   &atmark       &kp N          &kp M    &mkp LCLK  &mkp RCLK  &NUM1_SYMBOLLL2
+&kp LEFT_SHIFT      &kp LEFT_SHIFT  &kp LALT  &cmd_to_cmd  &kp SPACE  &kp RIGHT_ARROW  &KUDOKUTEN    &kp BACKSPACE                                 &play_pause_n_p
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -215,10 +215,10 @@
 
         SYMBOLS {
             bindings = <
-&kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp HASH     &kp RIGHT_PARENTHESIS  &kp DOLLAR                                    &none      &none  &none  &none  &none
-&kp QUESTION     &kp LESS_THAN         &kp AT_SIGN  &kp GREATER_THAN       &kp BACKSLASH   &none             &none       &none      &none  &none  &none  &kp ENTER
-&kp AMPERSAND    &kp LEFT_BRACKET      &JpBracket   &kp RIGHT_BRACKET      &kp LEFT_BRACE  &kp SINGLE_QUOTE  &none       &none      &none  &none  &none  &none
-&kp LSHFT        &kp LEFT_SHIFT        &kp LALT     &cmd_to_cmd            &kp BACKSPACE   &kp SEMICOLON     &KUDOKUTEN  &kp SPACE                       &none
+&kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp HASH     &kp RIGHT_PARENTHESIS  &kp DOLLAR                                    &none          &none  &none  &none  &none
+&kp QUESTION     &kp LESS_THAN         &kp AT_SIGN  &kp GREATER_THAN       &kp BACKSLASH   &none             &none       &none          &none  &none  &none  &kp ENTER
+&kp AMPERSAND    &kp LEFT_BRACKET      &JpBracket   &kp RIGHT_BRACKET      &kp LEFT_BRACE  &kp SINGLE_QUOTE  &none       &none          &none  &none  &none  &none
+&kp LSHFT        &kp LEFT_SHIFT        &kp LALT     &cmd_to_cmd            &kp SPACE       &kp SEMICOLON     &KUDOKUTEN  &kp BACKSPACE                       &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -226,10 +226,10 @@
 
         NUM {
             bindings = <
-&kp DOLLAR      &kp N7          &kp NUMBER_8  &kp N9       &kp PERCENT                              &kp HASH          &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
-&kp SLASH       &kp N4          &kp NUMBER_5  &kp N6       &kp MINUS      &none      &kp BACKSLASH  &kp AMPERSAND     &lt 5 QUESTION   &kp LESS_THAN         &kp GREATER_THAN       &kp ENTER
-&kp ASTERISK    &kp N1          &kp NUMBER_2  &kp N3       &kp PLUS       &kp EQUAL  &kp SLASH      &kp SINGLE_QUOTE  &kp SEMICOLON    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none
-&kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp NUMBER_0  &cmd_to_cmd  &kp BACKSPACE  &none      &KUDOKUTEN     &kp SPACE                                                                       &none
+&kp DOLLAR      &kp N7          &kp NUMBER_8  &kp N9       &kp PERCENT                            &kp HASH          &kp LEFT_PARENTHESIS  &kp EXCLAMATION  &kp RIGHT_PARENTHESIS  &none
+&kp SLASH       &kp N4          &kp NUMBER_5  &kp N6       &kp MINUS    &none      &kp BACKSLASH  &kp AMPERSAND     &kp LESS_THAN         &kp QUESTION     &kp GREATER_THAN       &kp ENTER
+&kp ASTERISK    &kp N1          &kp NUMBER_2  &kp N3       &kp PLUS     &kp EQUAL  &kp SLASH      &kp SINGLE_QUOTE  &kp LEFT_BRACKET      &kp SEMICOLON    &kp RIGHT_BRACKET      &none
+&kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp NUMBER_0  &cmd_to_cmd  &kp SPACE    &none      &KUDOKUTEN     &kp BACKSPACE                                                                   &none
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
