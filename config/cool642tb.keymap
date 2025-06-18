@@ -242,9 +242,9 @@
 
         NUM {
             bindings = <
-&kp DOLLAR      &kp N7          &kp NUMBER_8  &kp N9       &kp PERCENT                            &kp HASH          &kp LEFT_PARENTHESIS  &kp EXCLAMATION  &kp RIGHT_PARENTHESIS  &none
-&kp SLASH       &kp N4          &kp NUMBER_5  &kp N6       &kp MINUS    &none      &kp BACKSLASH  &kp AMPERSAND     &kp LESS_THAN         &kp QUESTION     &kp GREATER_THAN       &kp ENTER
-&kp ASTERISK    &kp N1          &kp NUMBER_2  &kp N3       &kp PLUS     &kp EQUAL  &kp SLASH      &kp SINGLE_QUOTE  &kp LEFT_BRACKET      &kp SEMICOLON    &kp RIGHT_BRACKET      &none
+&kp DOLLAR      &kp N7          &kp NUMBER_8  &kp N9       &kp PERCENT                            &kp HASH          &kp LEFT_PARENTHESIS  &kp QUESTION     &kp RIGHT_PARENTHESIS  &none
+&kp SLASH       &kp N4          &kp NUMBER_5  &kp N6       &kp MINUS    &none      &kp BACKSLASH  &kp AMPERSAND     &kp LEFT_BRACKET      &kp EXCLAMATION  &kp RIGHT_BRACKET      &kp ENTER
+&kp ASTERISK    &kp N1          &kp NUMBER_2  &kp N3       &kp PLUS     &kp EQUAL  &kp SLASH      &kp SINGLE_QUOTE  &kp LESS_THAN         &kp SEMICOLON    &kp GREATER_THAN       &none
 &kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp NUMBER_0  &cmd_to_cmd  &kp SPACE    &none      &KUDOKUTEN     &kp BACKSPACE                                                                   &none
             >;
 
@@ -253,10 +253,10 @@
 
         MOUSEDETAIL {
             bindings = <
-&ret_kp Q       &ret_kp W       &ret_kp E  &ret_kp R    &ret_kp T                                  &ret_kp Y      &ret_kp U  &ret_kp I  &ret_kp O      &ret_kp P
-&ret_kp A       &ret_kp S       &ret_kp D  &ret_kp F    &ret_kp G     &none          &VOL_UP_DOWN  &ret_kp H      &mo 5      &ret_kp K  &ret_kp L      &ret_kp RET
-&ret_kp Z       &ret_kp X       &ret_kp C  &ret_kp V    &ret_kp B     &none          &none         &ret_kp N      &ret_kp M  &mkp LCLK  &ret_mkp RCLK  &kp RIGHT_SHIFT
-&kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp LALT   &cmd_to_cmd  &ret_kp BSPC  &ret_kp SPACE  &KUDOKUTEN    &ret_kp SPACE                                       &play_pause_n_p
+&ret_kp Q       &ret_kp W       &ret_kp E  &ret_kp R    &ret_kp T                                         &ret_kp Y          &ret_kp U  &ret_kp I  &ret_kp O      &ret_kp P
+&ret_kp A       &ret_kp S       &ret_kp D  &ret_kp F    &ret_kp G      &none                &VOL_UP_DOWN  &ret_kp H          &mo 5      &ret_kp K  &ret_kp L      &ret_kp RET
+&ret_kp Z       &ret_kp X       &ret_kp C  &ret_kp V    &ret_kp B      &ret_kp LEFT_ARROW   &atmark       &ret_kp N          &ret_kp M  &mkp LCLK  &ret_mkp RCLK  &NUM1_SYMBOLLL2
+&kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp LALT   &cmd_to_cmd  &ret_kp SPACE  &ret_kp RIGHT_ARROW  &KUDOKUTEN    &ret_kp BACKSPACE                                       &play_pause_n_p
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
