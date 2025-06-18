@@ -15,7 +15,6 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-    tapping-term-ms = <300>;
 };
 
 /* &mkp_input_listener { input-processors = <&zip_temp_layer MOUSEDETAIL 100000>; }; */
