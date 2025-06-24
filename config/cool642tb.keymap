@@ -242,10 +242,10 @@
 
         NUM {
             bindings = <
-&kp DOLLAR      &kp N7          &kp NUMBER_8  &kp N9       &kp PERCENT                            &kp HASH          &kp LEFT_PARENTHESIS  &kp QUESTION     &kp RIGHT_PARENTHESIS  &none
-&kp SLASH       &kp N4          &kp NUMBER_5  &kp N6       &kp MINUS    &none      &kp BACKSLASH  &kp AMPERSAND     &kp LEFT_BRACKET      &kp EXCLAMATION  &kp RIGHT_BRACKET      &kp ENTER
-&kp ASTERISK    &kp N1          &kp NUMBER_2  &kp N3       &kp PLUS     &kp EQUAL  &kp SLASH      &kp SINGLE_QUOTE  &kp LESS_THAN         &kp SEMICOLON    &kp GREATER_THAN       &none
-&kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp NUMBER_0  &cmd_to_cmd  &kp SPACE    &none      &KUDOKUTEN     &kp BACKSPACE                                                                   &none
+&kp DOLLAR      &kp N7          &kp NUMBER_8  &kp N9       &kp PERCENT                             &kp HASH          &kp LEFT_PARENTHESIS  &kp QUESTION     &kp RIGHT_PARENTHESIS  &none
+&kp SLASH       &kp N4          &kp NUMBER_5  &kp N6       &kp MINUS    &none       &kp BACKSLASH  &kp AMPERSAND     &kp LEFT_BRACKET      &kp EXCLAMATION  &kp RIGHT_BRACKET      &kp ENTER
+&kp ASTERISK    &kp N1          &kp NUMBER_2  &kp N3       &kp PLUS     &kp EQUAL   &kp SLASH      &kp SINGLE_QUOTE  &kp LESS_THAN         &kp SEMICOLON    &kp GREATER_THAN       &none
+&kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp NUMBER_0  &cmd_to_cmd  &kp SPACE    &kp PERIOD  &KUDOKUTEN     &kp BACKSPACE                                                                   &none
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
