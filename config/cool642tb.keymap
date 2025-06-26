@@ -250,7 +250,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&bracket_kaku>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <260>;
         };
 
         bracket_kaku_jp_R: bracket_kaku_jp_R {
@@ -259,10 +259,10 @@
             #binding-cells = <0>;
             bindings =
                 <&kp RIGHT_BRACKET>,
-                <&bracket_kaku_jp_R>,
+                <&bracket_kaku_jp>,
                 <&bracket_nijuu_jp>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <260>;
         };
 
         bracket_maru_L: bracket_maru_L {
@@ -271,7 +271,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_PARENTHESIS>, <&bracket_maru>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <260>;
         };
 
         bracket_maru_jp_R: bracket_maru_jp_R {
@@ -280,7 +280,7 @@
             #binding-cells = <0>;
             bindings = <&kp RIGHT_PARENTHESIS>, <&bracket_maru_jp>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <260>;
         };
     };
 
