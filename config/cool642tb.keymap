@@ -124,13 +124,6 @@
             label = "ATMARK";
         };
 
-        JpBracket: JpBracket {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp JP_KANA &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp ENTER &kp LEFT_ARROW>;
-            label = "JPBRACKET";
-        };
-
         ret_mkp: ret_mkp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -144,6 +137,34 @@
                 <&mkp MACRO_PLACEHOLDER>;
 
             label = "RET_MKP";
+        };
+
+        bracket_kaku: bracket_kaku {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp JP_EISU &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_ARROW>;
+            label = "BRACKET_KAKU";
+        };
+
+        bracket_maru: bracket_maru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp JP_EISU &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW>;
+            label = "BRACKET_MARU";
+        };
+
+        bracket_kaku_jp: bracket_kaku_jp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp JP_KANA &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp ENTER &kp LEFT_ARROW>;
+            label = "BRACKET_KAKU_JP";
+        };
+
+        bracket_maru_jp: bracket_maru_jp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp JP_KANA &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp ENTER &kp LEFT_ARROW>;
+            label = "BRACKET_MARU_JP";
         };
     };
 
