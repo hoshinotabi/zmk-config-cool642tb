@@ -218,7 +218,7 @@
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp PERIOD>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <260>;
         };
 
         VOL_UP_DOWN: VOL_UP_DOWN {
