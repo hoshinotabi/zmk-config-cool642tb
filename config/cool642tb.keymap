@@ -246,7 +246,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BRACKET_KAKU_L";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET>, <&bracket_kaku_L>;
+            bindings = <&kp LEFT_BRACKET>, <&bracket_kaku>;
         };
 
         bracket_kaku_jp_R: bracket_kaku_jp_R {
@@ -255,7 +255,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp RIGHT_BRACKET>,
-                <&bracket_kaku_jp_R>,
+                <&bracket_kaku_jp>,
                 <&bracket_nijuu_jp>;
         };
 
@@ -263,14 +263,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BRACKET_MARU_L";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS>, <&bracket_maru_L>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&bracket_maru>;
         };
 
         bracket_maru_jp_R: bracket_maru_jp_R {
             compatible = "zmk,behavior-tap-dance";
             label = "BRACKET_MARU_JP_R";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_PARENTHESIS>, <&bracket_maru_jp_R>;
+            bindings = <&kp RIGHT_PARENTHESIS>, <&bracket_maru_jp>;
         };
     };
 
