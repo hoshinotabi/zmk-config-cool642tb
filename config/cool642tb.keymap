@@ -217,6 +217,8 @@
             label = "KUDOKUTEN";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp PERIOD>;
+
+            tapping-term-ms = <300>;
         };
 
         VOL_UP_DOWN: VOL_UP_DOWN {
@@ -309,7 +311,7 @@
 
         NUM {
             bindings = <
-&kp DOLLAR      &kp N7          &kp NUMBER_8  &kp N9       &kp PERCENT                             &kp HASH          &bracket_maru_L  &kp QUESTION     &bracket_kaku_jp_R  &none
+&kp DOLLAR      &kp N7          &kp NUMBER_8  &kp N9       &kp PERCENT                             &kp HASH          &bracket_maru_L  &kp QUESTION     &bracket_maru_jp_R  &none
 &kp SLASH       &kp N4          &kp NUMBER_5  &kp N6       &kp MINUS    &none       &kp BACKSLASH  &kp AMPERSAND     &bracket_kaku_L  &kp EXCLAMATION  &bracket_kaku_jp_R  &kp ENTER
 &kp ASTERISK    &kp N1          &kp NUMBER_2  &kp N3       &kp PLUS     &kp EQUAL   &kp SLASH      &kp SINGLE_QUOTE  &kp LESS_THAN    &kp SEMICOLON    &kp GREATER_THAN    &none
 &kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp NUMBER_0  &cmd_to_cmd  &kp SPACE    &kp PERIOD  &KUDOKUTEN     &kp BACKSPACE                                                           &none
