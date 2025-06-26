@@ -163,8 +163,15 @@
         bracket_maru_jp: bracket_maru_jp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp JP_KANA &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp ENTER &kp LEFT_ARROW>;
+            bindings = <&kp JP_KANA &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp ENTER &kp LEFT_ARROW>;
             label = "BRACKET_MARU_JP";
+        };
+
+        bracket_nijuu_jp: bracket_nijuu_jp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp JP_KANA &kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET) &kp ENTER &kp LEFT_ARROW>;
+            label = "BRACKET_NIJUU_JP";
         };
     };
 
@@ -234,6 +241,37 @@
 
             tapping-term-ms = <250>;
         };
+
+        bracket_kaku_L: bracket_kaku_L {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BRACKET_KAKU_L";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET>, <&bracket_kaku_L>;
+        };
+
+        bracket_kaku_jp_R: bracket_kaku_jp_R {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BRACKET_KAKU_JP_R";
+            #binding-cells = <0>;
+            bindings =
+                <&kp RIGHT_BRACKET>,
+                <&bracket_kaku_jp_R>,
+                <&bracket_nijuu_jp>;
+        };
+
+        bracket_maru_L: bracket_maru_L {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BRACKET_MARU_L";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&bracket_maru_L>;
+        };
+
+        bracket_maru_jp_R: bracket_maru_jp_R {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BRACKET_MARU_JP_R";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_PARENTHESIS>, <&bracket_maru_jp_R>;
+        };
     };
 
     keymap {
@@ -263,10 +301,10 @@
 
         NUM {
             bindings = <
-&kp DOLLAR      &kp N7          &kp NUMBER_8  &kp N9       &kp PERCENT                             &kp HASH          &kp LEFT_PARENTHESIS  &kp QUESTION     &kp RIGHT_PARENTHESIS  &none
-&kp SLASH       &kp N4          &kp NUMBER_5  &kp N6       &kp MINUS    &none       &kp BACKSLASH  &kp AMPERSAND     &kp LEFT_BRACKET      &kp EXCLAMATION  &kp RIGHT_BRACKET      &kp ENTER
-&kp ASTERISK    &kp N1          &kp NUMBER_2  &kp N3       &kp PLUS     &kp EQUAL   &kp SLASH      &kp SINGLE_QUOTE  &kp LESS_THAN         &kp SEMICOLON    &kp GREATER_THAN       &none
-&kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp NUMBER_0  &cmd_to_cmd  &kp SPACE    &kp PERIOD  &KUDOKUTEN     &kp BACKSPACE                                                                   &none
+&kp DOLLAR      &kp N7          &kp NUMBER_8  &kp N9       &kp PERCENT                             &kp HASH          &bracket_maru_L  &kp QUESTION     &bracket_kaku_jp_R  &none
+&kp SLASH       &kp N4          &kp NUMBER_5  &kp N6       &kp MINUS    &none       &kp BACKSLASH  &kp AMPERSAND     &bracket_kaku_L  &kp EXCLAMATION  &bracket_kaku_jp_R  &kp ENTER
+&kp ASTERISK    &kp N1          &kp NUMBER_2  &kp N3       &kp PLUS     &kp EQUAL   &kp SLASH      &kp SINGLE_QUOTE  &kp LESS_THAN    &kp SEMICOLON    &kp GREATER_THAN    &none
+&kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp NUMBER_0  &cmd_to_cmd  &kp SPACE    &kp PERIOD  &KUDOKUTEN     &kp BACKSPACE                                                           &none
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
