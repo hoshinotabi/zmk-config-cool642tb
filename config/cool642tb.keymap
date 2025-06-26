@@ -292,7 +292,7 @@
             bindings = <
 &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp HASH     &kp RIGHT_PARENTHESIS  &kp DOLLAR                                    &none          &none  &none  &none  &none
 &kp QUESTION     &kp LESS_THAN         &kp AT_SIGN  &kp GREATER_THAN       &kp BACKSLASH   &none             &none       &none          &none  &none  &none  &kp ENTER
-&kp AMPERSAND    &kp LEFT_BRACKET      &JpBracket   &kp RIGHT_BRACKET      &kp LEFT_BRACE  &kp SINGLE_QUOTE  &none       &none          &none  &none  &none  &none
+&kp AMPERSAND    &kp LEFT_BRACKET      &none        &kp RIGHT_BRACKET      &kp LEFT_BRACE  &kp SINGLE_QUOTE  &none       &none          &none  &none  &none  &none
 &kp LSHFT        &kp LEFT_SHIFT        &kp LALT     &cmd_to_cmd            &kp SPACE       &kp SEMICOLON     &KUDOKUTEN  &kp BACKSPACE                       &none
             >;
 
