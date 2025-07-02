@@ -40,7 +40,7 @@
 
         comb4 {
             bindings = <&kp BACKSPACE>;
-            key-positions = <9 8>;
+            key-positions = <9 21>;
             slow-release;
         };
 
