@@ -6,10 +6,9 @@
 
 #define JP_KANA LANGUAGE_1 /* かな */
 #define JP_EISU LANGUAGE_2 /* 英数 */
-#define MOUSEDETAIL 3
-#define MOUSE 4
-#define SCROLL 5
-#define NUM 6
+#define MOUSEDETAIL 2
+#define SCROLL 3
+#define NUM 1
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
 &mt {
