@@ -64,7 +64,7 @@
         };
 
         comb_bt_disc0 {
-            bindings = <&bt BT_DISC 0>;
+            bindings = <&bt BT_CLR_ALL>;
             key-positions = <2 3 4 1>;
             layers = <4>;
         };
