@@ -54,7 +54,7 @@
         };
 
         MOUSEDETAIL {
-            bindings = <&tog 3>;
+            bindings = <&tog 2>;
             key-positions = <18 41>;
         };
 
@@ -66,25 +66,25 @@
         comb_bt_disc0 {
             bindings = <&bt BT_DISC 0>;
             key-positions = <2 3 4 1>;
-            layers = <5>;
+            layers = <4>;
         };
 
         comb_bt_0 {
             bindings = <&bt BT_SEL 0>;
             key-positions = <0 34>;
-            layers = <5>;
+            layers = <4>;
         };
 
         comb_bt_1 {
             bindings = <&bt BT_SEL 1>;
             key-positions = <1 34>;
-            layers = <5>;
+            layers = <4>;
         };
 
         comb_bt_2 {
             bindings = <&bt BT_SEL 2>;
             key-positions = <2 34>;
-            layers = <5>;
+            layers = <4>;
         };
 
         comb_bt_disc1 {
@@ -231,7 +231,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "NUM1_SYMBOLLL2";
             #binding-cells = <0>;
-            bindings = <&mo 2>, <&mo 1>;
+            bindings = <&mo 1>, <&mo 0>;
 
             tapping-term-ms = <250>;
         };
@@ -282,23 +282,12 @@
         default_layer {
             bindings = <
 &kp Q               &kp W           &kp E     &kp R        &kp T                                     &kp Y          &kp U    &kp I      &kp O      &kp P
-&mt LEFT_CONTROL A  &kp S           &kp D     &kp F        &kp G      &none            &VOL_UP_DOWN  &kp H          &lt 5 J  &kp K      &kp L      &kp ENTER
-&kp Z               &kp X           &kp C     &kp V        &kp B      &kp LEFT_ARROW   &atmark       &kp N          &kp M    &mkp LCLK  &mkp RCLK  &mo 2
+&mt LEFT_CONTROL A  &kp S           &kp D     &kp F        &kp G      &none            &VOL_UP_DOWN  &kp H          &lt 4 J  &kp K      &kp L      &kp ENTER
+&kp Z               &kp X           &kp C     &kp V        &kp B      &kp LEFT_ARROW   &atmark       &kp N          &kp M    &mkp LCLK  &mkp RCLK  &mo 1
 &kp LEFT_SHIFT      &kp LEFT_SHIFT  &kp LALT  &cmd_to_cmd  &kp SPACE  &kp RIGHT_ARROW  &KUDOKUTEN    &kp BACKSPACE                                 &play_pause_n_p
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
-        };
-
-        SYMBOLS {
-            bindings = <
-&kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp HASH     &kp RIGHT_PARENTHESIS  &kp DOLLAR                                    &none          &none  &none  &none  &none
-&kp QUESTION     &kp LESS_THAN         &kp AT_SIGN  &kp GREATER_THAN       &kp BACKSLASH   &none             &none       &none          &none  &none  &none  &kp ENTER
-&kp AMPERSAND    &kp LEFT_BRACKET      &none        &kp RIGHT_BRACKET      &kp LEFT_BRACE  &kp SINGLE_QUOTE  &none       &none          &none  &none  &none  &none
-&kp LSHFT        &kp LEFT_SHIFT        &kp LALT     &cmd_to_cmd            &kp SPACE       &kp SEMICOLON     &KUDOKUTEN  &kp BACKSPACE                       &none
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         NUM {
@@ -315,7 +304,7 @@
         MOUSEDETAIL {
             bindings = <
 &ret_kp Q       &ret_kp W       &ret_kp E  &ret_kp R    &ret_kp T                                         &ret_kp Y          &ret_kp U  &ret_kp I  &ret_kp O      &ret_kp P
-&ret_kp A       &ret_kp S       &ret_kp D  &ret_kp F    &ret_kp G      &none                &VOL_UP_DOWN  &ret_kp H          &mo 5      &ret_kp K  &ret_kp L      &ret_kp RET
+&ret_kp A       &ret_kp S       &ret_kp D  &ret_kp F    &ret_kp G      &none                &VOL_UP_DOWN  &ret_kp H          &mo 4      &ret_kp K  &ret_kp L      &ret_kp RET
 &ret_kp Z       &ret_kp X       &ret_kp C  &ret_kp V    &ret_kp B      &ret_kp LEFT_ARROW   &atmark       &ret_kp N          &ret_kp M  &mkp LCLK  &ret_mkp RCLK  &NUM1_SYMBOLLL2
 &kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp LALT   &cmd_to_cmd  &ret_kp SPACE  &ret_kp RIGHT_ARROW  &KUDOKUTEN    &ret_kp BACKSPACE                                       &play_pause_n_p
             >;
@@ -326,7 +315,7 @@
         MOUSE {
             bindings = <
 &none               &none             &none             &none             &none                                               &ret_kp Y  &none      &none      &none      &none
-&kp RCTRL           &none             &none             &none             &none           &none            &kp C_VOLUME_UP    &ret_kp H  &mo 5      &none      &none      &none
+&kp RCTRL           &none             &none             &none             &none           &none            &kp C_VOLUME_UP    &ret_kp H  &mo 4      &none      &none      &none
 &none               &none             &none             &none             &none           &none            &kp C_VOLUME_DOWN  &ret_kp N  &ret_kp M  &mkp LCLK  &mkp RCLK  &kp RIGHT_SHIFT
 &ret_kp LEFT_SHIFT  &ret_kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_COMMAND  &kp LEFT_ARROW  &kp RIGHT_ARROW  &none              &none                                       &none
             >;
