@@ -1,6 +1,8 @@
 #include "cool642tb.dtsi"
 #include <input/processors.dtsi>
-#include "../../../layers.h"
+#define MOUSEDETAIL 2
+#define MOUSE       3
+#define SCROLL      4
 
 &default_transform {
     col-offset = <6>;
