@@ -1,22 +1,6 @@
-# This file generates the GitHub Actions matrix.
-# For simple board + shield combinations, add them to the top level board and
-# shield arrays, for more control, add individual board + shield combinations
-# to the `include` property. You can also use the `cmake-args` property to
-# pass flags to the build command and `artifact-name` to assign a name to
-# distinguish build outputs from each other:
-#
-# board: [ "nice_nano_v2" ]
-# shield: [ "corne_left", "corne_right" ]
-# include:
-#   - board: bdn9_rev2
-#   - board: nice_nano_v2
-#     shield: reviung41
-#   - board: nice_nano_v2
-#     shield: corne_left
-#     cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
-#     artifact-name: corne_left_with_logging
-#
 ---
+# A_v0.3-fix の build.yaml に「ログ付き右手側」を 1 本追加したもの。
+# 既存の 3 本はそのままなので、通常ファームも同時に得られます。
 include:
   - board: seeeduino_xiao_ble
     shield: cool642tb_R
@@ -25,3 +9,12 @@ include:
     shield: cool642tb_L
   - board: seeeduino_xiao_ble
     shield: settings_reset
+
+  # --- 診断用：USB ログ有効の右手側 -------------------------------
+  # studio スニップットは意図的に外しています（CDC の競合を避けるため）。
+  # LOG_PROCESS_THREAD_STARTUP_DELAY_MS は起動直後のログを
+  # コンソール接続後まで保留するための紐です。
+  - board: seeeduino_xiao_ble
+    shield: cool642tb_R
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y -DCONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS=8000
+    artifact-name: cool642tb_R_logging
